@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag parganini/web_server:$(date +%s)
     - name: Push the image to DockerHub
-      run: docker login -u parganini -p ${{ secrets.DOCKER_TOKEN }} && docker push parganini/web_server
+      run: docker login -u parganini -p ${{ secrets.DOCKER_TOKEN }} && docker push parganini/web_server:tagname
